@@ -1,10 +1,11 @@
-
-# imports
-
-import random
-
 # note. alias python=python3 
 
+# imports
+import random
+import nltk
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
+from nltk.tokenize import word_tokenize
 
 #! user input: How to ask the user for words?
 
@@ -14,7 +15,16 @@ import random
 
         # first we install NLP (might need to install pip first!)
 
+# using the quote provided from docs to test 
 
+sagan_quote = """
+... If you wish to make an apple pie from scratch,
+... you must first inventing the universe."""
+
+words_in_sagan_quote = word_tokenize(sagan_quote)
+test = nltk.pos_tag(words_in_sagan_quote)
+
+print(test)
 
         #? After we get a confirmation on what type of word this is, how do we then do certain actions based on that information
 
