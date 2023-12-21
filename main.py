@@ -22,7 +22,10 @@ adjective = input("Enter an adjective: ")
 
 #? how to insert dynamic variables into string
 
-chosenWords = f"The words you have chosen are {noun}, {verb}, and {adjective}."
+# chosenWords = f"The words you have chosen are {noun}, {verb}, and {adjective}."
+
+chosenWords = [[noun], [verb], [adjective]]
+
 
 print(chosenWords)
 
@@ -34,20 +37,28 @@ print(chosenWords)
 
         # first we install NLP (might need to install pip first!)
 
-# using the quote provided from docs to test 
 
-# sagan_quote = """
-# ... If you wish to make an apple pie from scratch,
-# ... you must first inventing the universe."""
+# words_in_chosenWords = word_tokenize(chosenWords)
 
-words_in_chosenWords = word_tokenize(chosenWords)
-test = nltk.pos_tag(words_in_chosenWords)
+nounTag = nltk.pos_tag(chosenWords[0])
+print(f"noun tagged here: {nounTag}")
 
-print(test)
-nltk.help.upenn_tagset()
+# chosenNoun = word_tokenize(noun)
+
+chosenVerb = nltk.pos_tag(verb)
+chosenAdjective = nltk.pos_tag(adjective)
+
+# print(chosenNoun)
+#! nltk.help.upenn_tagset()
 
         #? After we get a confirmation on what type of word this is, how do we then do certain actions based on that information
-
+if (nounTag[0][1] == "NN"):
+    print("NN")
+else:
+    print("Hmm thats not a noun!!!")
+    while (nounTag[0][1] != "NN"):
+        chosenWords[0] = input(f"Enter a REAL noun: {chosenWords[0]}")
+    
 
 
 
