@@ -1,8 +1,14 @@
 
+# imports
+
+import random
+
 # note. alias python=python3 
 
 
 #! user input: How to ask the user for words?
+
+
     #? do we need to check that user enters a proper noun, verb, or adjective? And if so we tell them? 
 
 # test 
@@ -41,12 +47,11 @@ stories = [
         f'Psychologically, from the {noun}\'s point of view... {verb} is the {adjective} achievement!'
     ]
 
-print(stories)
-
         #? How do we randomize these stories? 
 
+randomStory = random.choice(stories)
 
-
+print(f"Here is a random story: {randomStory}")
 
 
 
