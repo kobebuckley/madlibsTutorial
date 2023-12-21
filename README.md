@@ -33,7 +33,7 @@ Do we need a Front end ( HTML & CSS ) for this or do we keep this at just a term
 *Resources*
 --------------------------
 
-Mostly just google based on questions (not likely good to focus too much on AI at a beginner stage)
+Google, ChatGPT
 
 *NLP: Parts of Speech (POS)*
 --------------------------
