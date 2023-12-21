@@ -10,13 +10,19 @@ nltk.download('averaged_perceptron_tagger')
 
 
 # noun
-noun = input("Enter a noun: ")
+print("Enter a noun: ")
+
+noun = input("")
 
 # verbs
-verb = input("Enter a verb: ")
+print("Enter a verb: ")
+
+verb = input("")
 
 # adjectives
-adjective = input("Enter an adjective: ")
+print("Enter an adjective: ")
+
+adjective = input("")
 
 # Printing out sentences 
 
@@ -41,7 +47,7 @@ print(chosenWords)
 # words_in_chosenWords = word_tokenize(chosenWords)
 
 nounTag = nltk.pos_tag(chosenWords[0])
-print(f"noun tagged here: {nounTag}")
+# print(f"noun tagged here: {nounTag}")
 
 # chosenNoun = word_tokenize(noun)
 
@@ -52,12 +58,15 @@ chosenAdjective = nltk.pos_tag(adjective)
 #! nltk.help.upenn_tagset()
 
         #? After we get a confirmation on what type of word this is, how do we then do certain actions based on that information
-if (nounTag[0][1] == "NN"):
-    print("NN")
-else:
-    print("Hmm thats not a noun!!!")
-    while (nounTag[0][1] != "NN"):
-        chosenWords[0] = input(f"Enter a REAL noun: {chosenWords[0]}")
+while (nounTag[0][1] != "NN"):
+    print(nounTag[0][1])
+    print("Enter a REAL noun")
+    noun = input("")
+    chosenWords = [[noun], [verb], [adjective]]
+    nounTag = nltk.pos_tag(chosenWords[0])
+
+
+
     
 
 
