@@ -2,7 +2,7 @@
 # note. alias python=python3 
 
 
-#? user input: How to ask the user for words?
+#! user input: How to ask the user for words?
     #? do we need to check that user enters a proper noun, verb, or adjective? And if so we tell them? 
 
 # test 
@@ -27,6 +27,23 @@ chosen = f"The words you have chosen are {noun}, {verb}, and {adjective}."
 
 print(chosen)
 
+
+#! Making a list of stories to randomly choose
+
+    #? How do we make a list of stories / strings?
+
+stories = [
+
+        f'{noun} is where the {adjective} Elden Ring player {verb} across the field',
+
+        f'{noun} would have {verb} that this anime called Naruto was the {adjective} ever', 
+
+        f'Psychologically, from the {noun}\'s point of view... {verb} is the {adjective} achievement!'
+    ]
+
+print(stories)
+
+        #? How do we randomize these stories? 
 
 
 
@@ -65,8 +82,5 @@ print(chosen)
 
 #? use an array : How to generate random stories?
 
-#? How to insert the user written words into the stories?
-
-#? How to make the story appear to the user at the end
 
 #? Do we need a Front end ( HTML & CSS ) for this or do we keep this at just a terminal?
