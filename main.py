@@ -8,12 +8,6 @@ import random
 
 #! user input: How to ask the user for words?
 
-
-    #? do we need to check that user enters a proper noun, verb, or adjective? And if so we tell them? 
-        # ! This would use NLP 
-
-        #? After we get a confirmation on what type of word this is, how do we then do certain actions based on that information
-
 # test 
 
 # userInput = input("Enter something here: ")
