@@ -1,39 +1,53 @@
 
 # imports
-
 import random
+import nltk
+from nltk.tokenize import word_tokenize
 
-# note. alias python=python3 
+nltk.download('punkt')
+nltk.download('tagsets')
+nltk.download('averaged_perceptron_tagger')
 
+# ~ ------------------------------------------------------- ~
+# ~ ------------------------------------------------------- ~
 
-#! user input: How to ask the user for words?
+def validate_word(word, valid_tags):
+    chosen_words = [[word]]
+    word_tag = nltk.pos_tag(chosen_words[0])
 
-# test 
+    if any(tag[1] in valid_tags for tag in word_tag):
+        return True
+    else:
+        return False
 
-# userInput = input("Enter something here: ")
-# print(userInput)
+noun_tags = ["NN", "NNP", "NNPS", "NNS"]
+verb_tags = ["VB", "VBD", "VBG", "VBN", "VBP", "VBZ"]
+adj_tags = ["JJ", "JJR", "JJS"]
 
-# noun
-noun = input("Enter a noun: ")
+while True:
+    noun = input("Enter a noun: ")
+    if validate_word(noun, noun_tags):
+        print("Valid noun entered:", noun)
+        break
+    else:
+        print("Not a valid noun. Please enter a noun.")
 
-# verbs
-verb = input("Enter a verb: ")
+while True:
+    verb = input("Enter a verb: ")
+    if validate_word(verb, verb_tags):
+        print("Valid verb entered:", verb)
+        break
+    else:
+        print("Not a valid verb. Please enter a verb.")
 
-# adjectives
-adjective = input("Enter an adjective: ")
+while True:
+    adjective = input("Enter an adjective: ")
+    if validate_word(adjective, adj_tags):
+        print("Valid adjective entered:", adjective)
+        break
+    else:
+        print("Not a valid adjective. Please enter an adjective.")
 
-# Printing out sentences 
-
-#? how to insert dynamic variables into string
-
-chosen = f"The words you have chosen are {noun}, {verb}, and {adjective}."
-
-print(chosen)
-
-
-#! Making a list of stories to randomly choose
-
-    #? How do we make a list of stories / strings?
 
 stories = [
 
@@ -43,8 +57,6 @@ stories = [
 
         f'Psychologically, from the {noun}\'s point of view... {verb} is the {adjective} achievement!'
     ]
-
-        #? How do we randomize these stories? 
 
 randomStory = random.choice(stories)
 
