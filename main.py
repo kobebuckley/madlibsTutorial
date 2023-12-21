@@ -3,35 +3,11 @@
 # imports
 import random
 import nltk
-nltk.download('punkt')
-nltk.download('averaged_perceptron_tagger')
 from nltk.tokenize import word_tokenize
+nltk.download('punkt')
+nltk.download('tagsets')
+nltk.download('averaged_perceptron_tagger')
 
-#! user input: How to ask the user for words?
-
-
-    #? do we need to check that user enters a proper noun, verb, or adjective? And if so we tell them? 
-        # ! This would use NLP 
-
-        # first we install NLP (might need to install pip first!)
-
-# using the quote provided from docs to test 
-
-sagan_quote = """
-... If you wish to make an apple pie from scratch,
-... you must first inventing the universe."""
-
-words_in_sagan_quote = word_tokenize(sagan_quote)
-test = nltk.pos_tag(words_in_sagan_quote)
-
-print(test)
-
-        #? After we get a confirmation on what type of word this is, how do we then do certain actions based on that information
-
-# test 
-
-# userInput = input("Enter something here: ")
-# print(userInput)
 
 # noun
 noun = input("Enter a noun: ")
@@ -46,9 +22,35 @@ adjective = input("Enter an adjective: ")
 
 #? how to insert dynamic variables into string
 
-chosen = f"The words you have chosen are {noun}, {verb}, and {adjective}."
+chosenWords = f"The words you have chosen are {noun}, {verb}, and {adjective}."
 
-print(chosen)
+print(chosenWords)
+
+#! user input: How to ask the user for words?
+
+
+    #? do we need to check that user enters a proper noun, verb, or adjective? And if so we tell them? 
+        # ! This would use NLP 
+
+        # first we install NLP (might need to install pip first!)
+
+# using the quote provided from docs to test 
+
+# sagan_quote = """
+# ... If you wish to make an apple pie from scratch,
+# ... you must first inventing the universe."""
+
+words_in_chosenWords = word_tokenize(chosenWords)
+test = nltk.pos_tag(words_in_chosenWords)
+
+print(test)
+nltk.help.upenn_tagset()
+
+        #? After we get a confirmation on what type of word this is, how do we then do certain actions based on that information
+
+
+
+
 
 
 #! Making a list of stories to randomly choose
