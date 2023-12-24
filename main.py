@@ -1,5 +1,7 @@
 
-# imports
+
+#? imports for Language Processing
+
 import random
 import nltk
 from nltk.tokenize import word_tokenize
@@ -11,6 +13,8 @@ nltk.download('averaged_perceptron_tagger')
 # ~ ------------------------------------------------------- ~
 # ~ ------------------------------------------------------- ~
 
+#? word validation (will need imports, following resource links)
+
 def validate_word(word, valid_tags):
     chosen_words = [[word]]
     word_tag = nltk.pos_tag(chosen_words[0])
@@ -19,10 +23,18 @@ def validate_word(word, valid_tags):
         return True
     else:
         return False
+    
+    
+#? The tags are shown by the ntlk, on the documentation it can be found when using a function
 
 noun_tags = ["NN", "NNP", "NNPS", "NNS"]
 verb_tags = ["VB", "VBD", "VBG", "VBN", "VBP", "VBZ"]
 adj_tags = ["JJ", "JJR", "JJS"]
+
+
+
+
+#? each While loop will keep running until the user puts in the right Part of Speech
 
 while True:
     noun = input("Enter a noun: ")
@@ -49,6 +61,9 @@ while True:
         print("Not a valid adjective. Please enter an adjective.")
 
 
+
+#? Here is where we input the stories that we want users to randomly receive with their own words selected 
+
 stories = [
 
         f'{noun} is where the {adjective} Elden Ring player {verb} across the field',
@@ -58,7 +73,13 @@ stories = [
         f'Psychologically, from the {noun}\'s point of view... {verb} is the {adjective} achievement!'
     ]
 
+#? Here wwe choose a random story from the list
+
+
+
 randomStory = random.choice(stories)
+
+#? Here we display the random story to the user
 
 print(f"Here is a random story: {randomStory}")
 
