@@ -1,4 +1,5 @@
 
+# INFOGRAPHICS?
 
 #? imports for Language Processing
 
@@ -12,6 +13,7 @@ nltk.download('averaged_perceptron_tagger')
 
 # ~ ------------------------------------------------------- ~
 # ~ ------------------------------------------------------- ~
+
 
 #? word validation (will need imports, following resource links)
 
@@ -83,7 +85,7 @@ randomStory = random.choice(stories)
 
 print(f"Here is a random story: {randomStory}")
 
-#test
+
 
 
 
