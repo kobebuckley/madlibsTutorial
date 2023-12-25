@@ -75,7 +75,7 @@ stories = [
         f'Psychologically, from the {noun}\'s point of view... {verb} is the {adjective} achievement!'
     ]
 
-#? Here wwe choose a random story from the list
+#? Here we choose a random story from the list
 
 
 
