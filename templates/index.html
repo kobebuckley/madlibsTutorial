@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Flask App</title>
+    <title>User Input Form</title>
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <!-- Your HTML content goes here -->
+    <h1>Input Form</h1>
+    <form action="/process" method="post">
+        <label for="user_input">Enter your input:</label>
+        <input type="text" id="user_input" name="user_input">
+        <input type="submit" value="Submit">
+    </form>
 </body>
 </html>
