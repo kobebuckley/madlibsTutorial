@@ -6,19 +6,44 @@
 <body>
     <h1>Input Form</h1>
 
-    <form action="/process" method="post">
-        <label for="user_input">Enter your input:</label>
-        <input type="text" id="user_input" name="user_input">
+    <form action="/validation" method="post">
+        <label for="noun_input">Enter a noun:</label>
+        <input type="text" id="noun_input" name="noun_input" required>
+
+        <label for="adj_input">Enter an adjective:</label>
+        <!-- <label for="adj_input">Enter an adjective:</label> -->
+        <input type="text" id="adj_input" name="adj_input" required>
+
+        <label for="verb_input">Enter a verb:</label>
+        <input type="text" id="verb_input" name="verb_input" required>
+
         <input type="submit" value="Submit">
     </form>
-
-    {% if valid_message %}
-        <h1>Valid Noun Message</h1>
-        <p>{{ valid_message }}</p>
-    {% elif invalid_message %}
-        <h1>invalid Noun Message</h1>
-        <p>{{ invalid_message }}</p>
+    
+     {% if valid_noun %}
+        <p>Valid noun entered: {{ noun }}</p>
     {% endif %}
 
-</body>
+    {% if valid_adjective %}
+    <p>Valid adjective entered: {{ adjective }}</p>
+    {% endif %}
+
+   {% if valid_verb %}
+        <p>Valid verb entered: {{ verb }}</p>
+    {% endif %}
+
+    {% if invalid_noun %}
+        <p class="error">Not a valid noun. Please try again.</p>
+    {% endif %}
+    {% if invalid_adj %}
+        <p class="error">Not a valid adjective. Please try again.</p>
+    {% endif %}
+    {% if invalid_verb %}
+        <p class="error">Not a valid verb. Please try again.</p>
+    {% endif %}
+
+    {% if valid_noun and valid_adjective and valid_verb %}
+        <p>Your sentence: {{ noun }} {{ adjective }} {{ verb }}</p>
+    {% endif %}
+
 </html>
