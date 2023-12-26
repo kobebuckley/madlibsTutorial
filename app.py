@@ -19,7 +19,10 @@ def process():
             valid_message = f"Valid noun entered: {noun}"
             return render_template('index.html', valid_message=valid_message)
         else:
-            return "Not a valid noun. Please enter a noun."
+            invalid_message = f"Not a valid noun. Please try again"
+            return render_template('index.html', invalid_message=invalid_message)
+
+            # return "Not a valid noun. Please enter a noun."
 
 # while True:
 #     verb = input("Enter a verb: ")
