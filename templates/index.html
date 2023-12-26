@@ -20,7 +20,7 @@
         <input type="submit" value="Submit">
     </form>
     
-     {% if valid_noun %}
+     <!-- {% if valid_noun %}
         <p>Valid noun entered: {{ noun }}</p>
     {% endif %}
 
@@ -30,21 +30,29 @@
 
    {% if valid_verb %}
         <p>Valid verb entered: {{ verb }}</p>
-    {% endif %}
+    {% endif %} -->
 
-    {% if invalid_noun %}
-        <p class="error">Not a valid noun. Please try again.</p>
-    {% endif %}
-    {% if invalid_adj %}
-        <p class="error">Not a valid adjective. Please try again.</p>
-    {% endif %}
-    {% if invalid_verb %}
-        <p class="error">Not a valid verb. Please try again.</p>
-    {% endif %}
+    {% if not valid_noun or not valid_adjective or not valid_verb %}
+
+        {% if not valid_noun %}
+            <p class="error">Not a valid noun. Please try again.</p>
+        {% endif %}
+    
+        {% if not valid_adjective %}
+            <p class="error">Not a valid adjective. Please try again.</p>
+        {% endif %}
+    
+        {% if not valid_verb %}
+            <p class="error">Not a valid verb. Please try again.</p>
+        {% endif %}
+        
+{% endif %}
+
 
     {% if valid_noun and valid_adjective and valid_verb %}
-    <!-- <p>Your sentence: {{ noun }} {{ adjective }} {{ verb }}</p> -->
-    <p> {{randomStory}} </p>
+
+        <p> {{randomStory}} </p>
+
     {% endif %}
 
 </html>

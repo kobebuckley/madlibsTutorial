@@ -29,6 +29,7 @@ def validate_words():
 
         f'Psychologically, from the {noun}\'s point of view... {verb} is the {adjective} achievement!'
     ]
+    
     randomStory = random.choice(stories)
     print(randomStory)
     # print(valid_adjective, valid_verb, valid_noun)
