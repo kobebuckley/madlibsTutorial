@@ -3,7 +3,7 @@
 
 #? imports for Language Processing
 
-import random
+# import random
 import nltk
 from nltk.tokenize import word_tokenize
 
@@ -66,14 +66,7 @@ adj_tags = ["JJ", "JJR", "JJS"]
 
 #? Here is where we input the stories that we want users to randomly receive with their own words selected 
 
-# stories = [
 
-#         f'{noun} is where the {adjective} Elden Ring player {verb} across the field',
-
-#         f'{noun} would have {verb} that this anime called Naruto was the {adjective} ever', 
-
-#         f'Psychologically, from the {noun}\'s point of view... {verb} is the {adjective} achievement!'
-#     ]
 
 #? Here we choose a random story from the list
 
