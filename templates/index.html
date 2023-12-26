@@ -5,10 +5,17 @@
 </head>
 <body>
     <h1>Input Form</h1>
+
     <form action="/process" method="post">
         <label for="user_input">Enter your input:</label>
         <input type="text" id="user_input" name="user_input">
         <input type="submit" value="Submit">
     </form>
+
+    {% if valid_message %}
+        <h1>Valid Noun Message</h1>
+        <p>{{ valid_message }}</p>
+    {% endif %}
+
 </body>
 </html>
