@@ -62,3 +62,7 @@ https://realpython.com/nltk-nlp-python/#tagging-parts-of-speech
 Incorporate DALL·E for image generation based on User Input + Stories 
 
 https://platform.openai.com/docs/guides/images/
+
+Finding instructions to import Open Ai api
+
+https://github.com/openai/openai-python

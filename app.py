@@ -1,6 +1,7 @@
 import random
 from flask import Flask, render_template, request
 from main import validate_sentence
+from openai import OpenAI # pip install openai
 
 app = Flask(__name__)
 
@@ -46,10 +47,24 @@ def validate_words():
     if not valid_verb:
         error_messages.append("Not a valid verb. Please try again.")
 
+    client = OpenAI() # needs api key to function, also will need dot env to hide the key 
+
+    response = client.images.generate(
+    model="dall-e-3",
+    prompt="a white siamese cat",
+    size="1024x1024",
+    quality="standard",
+    n=1,
+    )
+
+    image_url = response.data[0].url
+
+
     if error_messages:
         return render_template('index.html', error_messages=error_messages)
     else:
        return render_template('index.html', valid_noun=valid_noun, valid_verb=valid_verb, valid_adjective=valid_adjective,
-                            noun=noun, verb=verb, adjective=adjective, randomStory=randomStory)
+                            noun=noun, verb=verb, adjective=adjective, randomStory=randomStory, image_url=image_url)
+                            
 if __name__ == '__main__':
     app.run(debug=True)     
