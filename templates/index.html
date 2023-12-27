@@ -6,7 +6,7 @@
 <body>
     <h1>Input Form</h1>
 
-    <form action="/validation" method="post">
+    <form action="/story-val" method="post">
         <label for="noun_input">Enter a noun:</label>
         <input type="text" id="noun_input" name="noun_input" required placeholder="tom, apple...">
 
@@ -19,26 +19,22 @@
         <input type="submit" value="Submit">
     </form>
 
-    {% if not valid_noun or not valid_adjective or not valid_verb %}
-
-        {% if not valid_noun %}
-            <p class="error">Not a valid noun. Please try again.</p>
+    <div id="errorSection">
+        {% if error_messages %}
+            <ul class="error">
+                {% for error_message in error_messages %}
+                    <li>{{ error_message }}</li>
+                {% endfor %}
+            </ul>
         {% endif %}
+    </div>
     
-        {% if not valid_adjective %}
-            <p class="error">Not a valid adjective. Please try again.</p>
+    <div id="validSection">
+        {% if valid_noun and valid_adjective and valid_verb %}
+            <p>{{ randomStory }}</p>
+           
+            <img src="image.jpg" alt="image of ai input?">
         {% endif %}
-    
-        {% if not valid_verb %}
-            <p class="error">Not a valid verb. Please try again.</p>
-        {% endif %}
-        
-    {% endif %}
-
-    {% if valid_noun and valid_adjective and valid_verb %}
-
-        <p> {{randomStory}} </p>
-
-    {% endif %}
+    </div>
 
 </html>

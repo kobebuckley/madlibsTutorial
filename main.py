@@ -18,16 +18,25 @@ nltk.download('averaged_perceptron_tagger')
 #? word validation (will need imports, following resource links)
 
 def validate_word(word, valid_tags):
-    chosen_words = [[word]]
-    word_tag = nltk.pos_tag(chosen_words[0])
+    return word in valid_tags
 
-    # print(word_tag)
+def validate_sentence(sentence):
+    tagged = nltk.pos_tag(word_tokenize(sentence))
+
+    print(f"tagged here: {tagged}")
+
+    valid_noun = validate_word(tagged[0][1], noun_tags)
+    print(f"noun tagged here: {valid_noun}")
+
+    valid_adjective = validate_word(tagged[5][1], adj_tags)
+    print(f"adjective tagged here: {valid_adjective}")
+
+    valid_verb = validate_word(tagged[1][1], verb_tags)
+    print(f"verb tagged here: {valid_verb}")
     
-    if any(tag[1] in valid_tags for tag in word_tag):
-        return True
-    else:
-        return False
-    
+    return valid_noun, valid_adjective, valid_verb
+
+
     
 #? The tags are shown by the ntlk, on the documentation it can be found when using a function
 
@@ -35,6 +44,9 @@ noun_tags = ["NN", "NNP", "NNPS", "NNS"]
 adj_tags = ["JJ", "JJR", "JJS"]
 verb_tags = ["VB", "VBD", "VBG", "VBN", "VBP", "VBZ"]
 
+# combo_tag = ["VBD", "NN"]
+
+# combo_tag = ["NN_VBD"]
 
 
 #? each While loop will keep running until the user puts in the right Part of Speech
