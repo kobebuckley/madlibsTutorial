@@ -12,14 +12,6 @@ app = Flask(__name__)
 #     'Psychologically as an anime enjoyer, {noun} fan\'s point of view... {verb} is the {adjective} achievement!',
 # ]
 
-stories = [
-    "Jujutsu Kaisen follows {noun} {adjective} students {verb} curses and their powers.",
-    "Dr. Stone portrays a world where {noun} {verb} to rebuild civilization after a {adjective} event.",
-    "Jujutsu Kaisen introduces a {adjective} {noun} who {verb} to control cursed energy.",
-    "{verb} Shippuden delves into the {adjective} {noun} of a young ninja's growth.",
-    "A {adjective} cat psychic {noun} who {verb} evil spirits in Mob Psycho the anime style.",
-    "Envision the {adjective} cat-and-mouse game between a detective and a {noun} who {verb} death through Death Note the anime style"
-]
 
 
 @app.route('/')
@@ -58,6 +50,16 @@ def validate_words():
 
     #     f'Psychologically as an anime enjoyer, {noun}\'s point of view... {verb} is the {adjective} achievement!'
     # ]
+
+    stories = [
+    f"Jujutsu Kaisen follows {noun} {adjective} students {verb} curses and their powers.",
+    f"Dr. Stone portrays a world where {noun} {verb} to rebuild civilization after a {adjective} event.",
+    f"Jujutsu Kaisen introduces a {adjective} {noun} who {verb} to control cursed energy.",
+    f"{verb} Shippuden delves into the {adjective} {noun} of a young ninja's growth.",
+    f"A {adjective} cat psychic {noun} who {verb} evil spirits in Mob Psycho the anime style.",
+    f"Envision the {adjective} cat-and-mouse game between a detective and a {noun} who {verb} death through Death Note the anime style"
+                    ]
+
 
     randomStory = random.choice(stories)
 
