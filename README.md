@@ -1,5 +1,15 @@
 # madlibsTutorial
 
+* more ideas * 
+--------------------------
+
+Ensuring that page refresh does not also attempt to 'reroll' for a new story using the same words. Unless the user clicks a button to do so for example
+
+Adding in the image generation feature, while ensuring there is a limit on it 
+--------------------------
+
+
+
 The Start of Tutorials based on QDD (https://youtu.be/343EWZS9O88?t=63) that will be shared on CWA
 --------------------------
 

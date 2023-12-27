@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Input Form</title>
+</head>
+<body>
+    <h1>Input Form</h1>
+
+    <form action="/story-val" method="post">
+        <label for="noun_input">Enter a noun:</label>
+        <input type="text" id="noun_input" name="noun_input" required placeholder="tom, apple...">
+
+        <label for="adj_input">Enter an adjective:</label>
+        <input type="text" id="adj_input" name="adj_input" placeholder="big, small..." required>
+
+        <label for="verb_input">Enter a verb:</label>
+        <input type="text" id="verb_input" name="verb_input" placeholder="run, running" required>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="errorSection">
+        {% if error_messages %}
+            <ul class="error">
+                {% for error_message in error_messages %}
+                    <li>{{ error_message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+    
+    <div id="validSection">
+        {% if valid_noun and valid_adjective and valid_verb %}
+            <p>{{ randomStory }}</p>
+           
+            <img src="image.jpg" alt="image of ai input?">
+        {% endif %}
+    </div>
+
+</html>
