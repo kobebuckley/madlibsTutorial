@@ -8,29 +8,16 @@
 
     <form action="/validation" method="post">
         <label for="noun_input">Enter a noun:</label>
-        <input type="text" id="noun_input" name="noun_input" required>
+        <input type="text" id="noun_input" name="noun_input" required placeholder="tom, apple...">
 
         <label for="adj_input">Enter an adjective:</label>
-        <!-- <label for="adj_input">Enter an adjective:</label> -->
-        <input type="text" id="adj_input" name="adj_input" required>
+        <input type="text" id="adj_input" name="adj_input" placeholder="big, small..." required>
 
         <label for="verb_input">Enter a verb:</label>
-        <input type="text" id="verb_input" name="verb_input" required>
+        <input type="text" id="verb_input" name="verb_input" placeholder="run, running" required>
 
         <input type="submit" value="Submit">
     </form>
-    
-     <!-- {% if valid_noun %}
-        <p>Valid noun entered: {{ noun }}</p>
-    {% endif %}
-
-    {% if valid_adjective %}
-    <p>Valid adjective entered: {{ adjective }}</p>
-    {% endif %}
-
-   {% if valid_verb %}
-        <p>Valid verb entered: {{ verb }}</p>
-    {% endif %} -->
 
     {% if not valid_noun or not valid_adjective or not valid_verb %}
 
@@ -47,7 +34,6 @@
         {% endif %}
         
 {% endif %}
-
 
     {% if valid_noun and valid_adjective and valid_verb %}
 

@@ -21,6 +21,8 @@ def validate_word(word, valid_tags):
     chosen_words = [[word]]
     word_tag = nltk.pos_tag(chosen_words[0])
 
+    # print(word_tag)
+    
     if any(tag[1] in valid_tags for tag in word_tag):
         return True
     else:
@@ -30,9 +32,8 @@ def validate_word(word, valid_tags):
 #? The tags are shown by the ntlk, on the documentation it can be found when using a function
 
 noun_tags = ["NN", "NNP", "NNPS", "NNS"]
-verb_tags = ["VB", "VBD", "VBG", "VBN", "VBP", "VBZ"]
 adj_tags = ["JJ", "JJR", "JJS"]
-
+verb_tags = ["VB", "VBD", "VBG", "VBN", "VBP", "VBZ"]
 
 
 
@@ -67,6 +68,14 @@ adj_tags = ["JJ", "JJR", "JJS"]
 #? Here is where we input the stories that we want users to randomly receive with their own words selected 
 
 
+# stories = [
+
+#         f'{noun} is where the {adjective} Elden Ring player {verb} across the field',
+
+#         f'{noun} would have {verb} that this anime called Naruto was the {adjective} ever', 
+
+#         f'Psychologically, from the {noun}\'s point of view... {verb} is the {adjective} achievement!'
+#     ]
 
 #? Here we choose a random story from the list
 
