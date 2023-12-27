@@ -5,6 +5,23 @@ from main import validate_word, noun_tags, adj_tags, verb_tags
 
 app = Flask(__name__)
 
+
+# stories = [
+#     'Cosplayer is where the {adjective} Elden Ring {noun} {verb} across the field.',
+#     'Otaku would {verb} that this {noun} called Naruto was the {adjective} ever.',
+#     'Psychologically as an anime enjoyer, {noun} fan\'s point of view... {verb} is the {adjective} achievement!',
+# ]
+
+stories = [
+    "Jujutsu Kaisen follows {noun} {adjective} students {verb} curses and their powers.",
+    "Dr. Stone portrays a world where {noun} {verb} to rebuild civilization after a {adjective} event.",
+    "Jujutsu Kaisen introduces a {adjective} {noun} who {verb} to control cursed energy.",
+    "{verb} Shippuden delves into the {adjective} {noun} of a young ninja's growth.",
+    "A {adjective} cat psychic {noun} who {verb} evil spirits in Mob Psycho the anime style.",
+    "Envision the {adjective} cat-and-mouse game between a detective and a {noun} who {verb} death through Death Note the anime style"
+]
+
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -33,14 +50,14 @@ def validate_words():
     # print(valid_adjective)
     # print(valid_verb)
     
-    stories = [
+    # stories = [
 
-        f'{noun} is where the {adjective} Elden Ring player {verb} across the field',
+    #     f'{noun} is where the {adjective} Elden Ring player {verb} across the field',
 
-        f'{noun} would {verb} that this anime called Naruto was the {adjective} ever', 
+    #     f'{noun} would {verb} that this anime called Naruto was the {adjective} ever', 
 
-        f'Psychologically as an anime enjoyer, {noun}\'s point of view... {verb} is the {adjective} achievement!'
-    ]
+    #     f'Psychologically as an anime enjoyer, {noun}\'s point of view... {verb} is the {adjective} achievement!'
+    # ]
 
     randomStory = random.choice(stories)
 
