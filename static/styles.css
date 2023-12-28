@@ -18,25 +18,18 @@ body {
     margin: 0 auto;
 }
 
-
-.form-group {
-    margin-bottom: 20px; 
-}
-
-
 .form-group label,
 .form-group input {
-    display: block; 
     width: 100%; 
     box-sizing: border-box; 
 }
-
 
 .content-box {
     border: 4px solid #333; 
     padding: 20px;
     width: 80%; 
     max-width: 600px; 
+    
 }
 
 h1 {
@@ -48,6 +41,7 @@ form,
 #errorSection,
 #validSection {
     margin-bottom: 20px; 
+    text-align: center; 
 }
 
 #validSection {
@@ -55,10 +49,10 @@ form,
     margin-top: 20px; 
 }
 
-
 #validSection img {
-    max-width: 500px; 
-    max-height: 500px; 
-    width: auto;
-    height: auto;
+    max-width: 100%; 
+    height: auto; 
+    display: block;
+    margin: 0 auto; 
 }
+
