@@ -36,7 +36,20 @@ def validate_words():
     valid_verb = validation_sentence[2]
 
     stories = [
-        f"Dr. Stone portrays a world where {noun} {verb} to rebuild civilization after a {adjective} event in an anime stlye.",
+        # f"anime art style, darkcore aesthetic, a nameless {noun} is {verb} alone in a {adjective} room and pondering life, he must confront his own demons in order to save the world, grim, dark, peculiar",
+        f"In the stylish world of 'Cowboy Bebop,' a brooding {noun} Spike Spiegel {verb} {adjective} alone in a dimly lit room, reflecting on his past, haunted by ghosts, battling inner turmoil.",
+        f"Within the haunting ambiance of 'Death Note,' a {adjective} Light Yagami {verb} silently in a {adjective} chamber, plotting fateful moves, wrestling with the abyss, chasing forbidden power."
+        # f"Embracing the whimsy of 'My Neighbor Totoro,' a curious Totoro playfully frolics in a cozy forest, lost in thought, cherishing serene moments, seeking solace in simplicity, and {noun} is {verb} within a {adjective} time."
+        # f"In the enchanting world of 'Sailor Moon,' a determined Usagi Tsukino gazes into the moonlit night alone, contemplating destiny, summoning courage, embracing the cosmic order."
+        # f"Amidst the cyberpunk vibe of 'Ghost in the Shell,' a contemplative Major Motoko Kusanagi stands stoically in a futuristic room, pondering existence, questioning reality, lost in a sea of data."
+        # f"Immersed in the captivating 'Attack on Titan' universe, a conflicted Eren Yeager paces in a grim chamber, battling inner turmoil, haunted by past traumas, driven by vengeance."
+        # f"Within the vibrant world of 'Naruto,' a determined Naruto Uzumaki stands resiliently in a sunlit room, dreaming of becoming Hokage, facing trials, seeking validation and acceptance."
+        # f"In the mystical aura of 'Spirited Away,' a curious Chihiro lingers in a mysterious chamber, embracing the surreal, confronting spirits, seeking to break the curse, hoping for salvation."
+        # f"Amidst the medieval setting of 'Berserk,' a tormented Guts sits solemnly in a dark chamber, burdened by destiny, battling demons, seeking retribution in a cruel world."
+        # f"In the whimsical world of 'One Piece,' a determined Monkey D. Luffy stands boldly in a vibrant room, dreaming of becoming Pirate King, confronting challenges, chasing freedom and adventure."
+       
+       
+        # f"Dr. Stone portrays a world where {noun} {verb} to rebuild civilization after a {adjective} event in an anime stlye.",
         # f"Jujutsu Kaisen follows {noun} {adjective} students {verb} curses and their powers in an anime stlye.",
         # f"Jujutsu Kaisen introduces a {adjective} {noun} who {verb} to control cursed energy in an anime stlye.",
         # f"Jujutsu Kaisen introduces a {adjective} {noun} who {verb} to control cursed energy in Attack on Titan the anime stlye.",
@@ -63,7 +76,7 @@ def validate_words():
     prompt=randomStory,
     size="1024x1024",
     quality="hd",
-    style="natural",
+    style="vivid",
     n=1,
     )
 
