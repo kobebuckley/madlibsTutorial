@@ -9,16 +9,23 @@
 
         <h1>Input Form</h1>
         
-        <form action="/story-val" method="post">
+        <form action="/story-val" method="post" class="form-container">
+
+        <div class="form-group">
             <label for="noun_input">Enter a noun:</label>
             <input type="text" id="noun_input" name="noun_input" required placeholder="tom, apple...">
-            
+        </div>
+
+        <div class="form-group">
             <label for="adj_input">Enter an adjective:</label>
             <input type="text" id="adj_input" name="adj_input" placeholder="big, small..." required>
-            
+        </div>    
+
+        <div class="form-group">
             <label for="verb_input">Enter a verb:</label>
             <input type="text" id="verb_input" name="verb_input" placeholder="run, running" required>
-            
+        </div>
+        
             <input type="submit" value="Submit">
         </form>
         

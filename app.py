@@ -16,10 +16,14 @@ def index():
 def validate_words():
 
     # all input, including space, can mess up the validation
-
+    # changing case, as it affects what the POS states a word as (such as lowercase adj properly, instead of as a noun when capitalized)
     noun = request.form['noun_input']
     adjective = request.form['adj_input']
     verb = request.form['verb_input']
+
+    noun = noun.capitalize()
+    adjective = adjective.lower()
+    verb = verb.lower()
 
     #? This is a placeholder sentence to ensure that the user words are given correct Parts of Speech tags.
     sentence = f"{noun} {verb} to the really {adjective} store"
@@ -58,7 +62,8 @@ def validate_words():
     model="dall-e-3",
     prompt=randomStory,
     size="1024x1024",
-    quality="standard",
+    quality="hd",
+    style="natural",
     n=1,
     )
 
