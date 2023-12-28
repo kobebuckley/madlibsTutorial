@@ -29,12 +29,13 @@ def validate_words():
     valid_verb = validation_sentence[2]
 
     stories = [
-        f"Jujutsu Kaisen follows {noun} {adjective} students {verb} curses and their powers.",
-        f"Dr. Stone portrays a world where {noun} {verb} to rebuild civilization after a {adjective} event.",
-        f"Jujutsu Kaisen introduces a {adjective} {noun} who {verb} to control cursed energy.",
-        f"{verb} Shippuden delves into the {adjective} {noun} of a young ninja's growth.",
-        f"A {adjective} cat psychic {noun} who {verb} evil spirits in Mob Psycho the anime style.",
-        f"Envision the {adjective} cat-and-mouse game between a detective and a {noun} who {verb} death through Death Note the anime style"]
+        f"Jujutsu Kaisen follows {noun} {adjective} students {verb} curses and their powers in an anime stlye.",
+        f"Dr. Stone portrays a world where {noun} {verb} to rebuild civilization after a {adjective} event in an anime stlye.",
+        f"Jujutsu Kaisen introduces a {adjective} {noun} who {verb} to control cursed energy in an anime stlye.",
+        f"Jujutsu Kaisen introduces a {adjective} {noun} who {verb} to control cursed energy in Attack on Titan the anime stlye.",
+        f"{verb} Shippuden delves into the {adjective} {noun} of a young ninja's growth in an anime stlye.",
+        f"A {adjective} cat psychic {noun} who {verb} evil spirits in the anime style of Mob Psycho.",
+        f"Envision the {adjective} cat-and-mouse game between a detective and a {noun} who {verb} death through Death Note in an anime stlye"]
 
     randomStory = random.choice(stories)
 
@@ -51,7 +52,7 @@ def validate_words():
 
     response = client.images.generate(
     model="dall-e-3",
-    prompt="a white siamese cat",
+    prompt=randomStory,
     size="1024x1024",
     quality="standard",
     n=1,
