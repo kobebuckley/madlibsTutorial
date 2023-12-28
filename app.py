@@ -15,6 +15,8 @@ def index():
 
 def validate_words():
 
+    # all input, including space, can mess up the validation
+
     noun = request.form['noun_input']
     adjective = request.form['adj_input']
     verb = request.form['verb_input']
