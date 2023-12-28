@@ -1,0 +1,5 @@
+* { /* Setting up page to have a fresh start for styling */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
