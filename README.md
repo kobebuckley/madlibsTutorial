@@ -66,3 +66,8 @@ https://platform.openai.com/docs/guides/images/
 Finding instructions to import Open Ai api
 
 https://github.com/openai/openai-python
+
+Api Key for Open Ai (Single Project)
+
+https://platform.openai.com/docs/quickstart?context=python
+
