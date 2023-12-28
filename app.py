@@ -25,19 +25,21 @@ def validate_words():
     sentence = f"{noun} {verb} to the really {adjective} store"
 
     validation_sentence = validate_sentence(sentence)
+    print(f"Here is the validate sentence: {validate_sentence}")
 
     valid_noun = validation_sentence[0]
     valid_adjective = validation_sentence[1]
     valid_verb = validation_sentence[2]
 
     stories = [
-        f"Jujutsu Kaisen follows {noun} {adjective} students {verb} curses and their powers in an anime stlye.",
         f"Dr. Stone portrays a world where {noun} {verb} to rebuild civilization after a {adjective} event in an anime stlye.",
-        f"Jujutsu Kaisen introduces a {adjective} {noun} who {verb} to control cursed energy in an anime stlye.",
-        f"Jujutsu Kaisen introduces a {adjective} {noun} who {verb} to control cursed energy in Attack on Titan the anime stlye.",
-        f"{verb} Shippuden delves into the {adjective} {noun} of a young ninja's growth in an anime stlye.",
-        f"A {adjective} cat psychic {noun} who {verb} evil spirits in the anime style of Mob Psycho.",
-        f"Envision the {adjective} cat-and-mouse game between a detective and a {noun} who {verb} death through Death Note in an anime stlye"]
+        # f"Jujutsu Kaisen follows {noun} {adjective} students {verb} curses and their powers in an anime stlye.",
+        # f"Jujutsu Kaisen introduces a {adjective} {noun} who {verb} to control cursed energy in an anime stlye.",
+        # f"Jujutsu Kaisen introduces a {adjective} {noun} who {verb} to control cursed energy in Attack on Titan the anime stlye.",
+        # f"{verb} Shippuden delves into the {adjective} {noun} of a young ninja's growth in an anime stlye.",
+        # f"A {adjective} cat psychic {noun} who {verb} evil spirits in the anime style of Mob Psycho.",
+        # f"Envision the {adjective} cat-and-mouse game between a detective and a {noun} who {verb} death through Death Note in an anime stlye"
+        ]
 
     randomStory = random.choice(stories)
 
