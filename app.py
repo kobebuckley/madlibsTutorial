@@ -82,7 +82,7 @@ def validate_words():
     # )
 
     # image_url = response.data[0].url
-    image_url = '/static/placeholder.png'  # Adjust the path accordingly
+    image_url = '/static/placeholder1.png'  # Adjust the path accordingly
 
 
     # Prompt is revised by Dalle 3, maybe can aim to make the revised prompt as close to original as possible
