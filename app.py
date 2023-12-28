@@ -69,19 +69,25 @@ def validate_words():
     if not valid_verb:
         error_messages.append("Not a valid verb. Please try again.")
 
-    client = OpenAI() # needs api key to function, also will need dot env to hide the key 
+    # needs api key to function, also will need dot env to hide the key 
+    # client = OpenAI() 
 
-    response = client.images.generate(
-    model="dall-e-3",
-    prompt=randomStory,
-    size="1024x1024",
-    quality="hd",
-    style="vivid",
-    n=1,
-    )
+    # response = client.images.generate(
+    # model="dall-e-3",
+    # prompt=randomStory,
+    # size="1024x1024",
+    # quality="standard",
+    # style="vivid",
+    # n=1,
+    # )
 
-    image_url = response.data[0].url
+    # image_url = response.data[0].url
+    image_url = '/static/placeholder.png'  # Adjust the path accordingly
 
+
+    # Prompt is revised by Dalle 3, maybe can aim to make the revised prompt as close to original as possible
+    
+    # print(response.data)
 
     if error_messages:
         return render_template('index.html', error_messages=error_messages)
