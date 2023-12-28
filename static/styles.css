@@ -1,64 +1,89 @@
-* { /* Setting up page to have a fresh start for styling */
+/* Reset styles */
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
-    
+    box-sizing: border-box;
 }
 
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #f0f0f0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.main-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .form-container {
-    width: 300px; 
+    width: 100%;
+    max-width: 400px;
     margin: 0 auto;
 }
 
-
 .form-group {
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
-
 
 .form-group label,
 .form-group input {
-    display: block; 
-    width: 100%; 
-    box-sizing: border-box; 
+    width: 100%;
 }
-
-
 .content-box {
-    border: 4px solid #333; 
+    border: 4px solid #333;
     padding: 20px;
-    width: 80%; 
-    max-width: 600px; 
+    width: 100%;
+    box-sizing: border-box;
 }
 
 h1 {
+    border: 4px solid #333;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
     text-align: center;
-    margin-bottom: 20px; 
 }
 
 form,
 #errorSection,
 #validSection {
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 
 #validSection {
     text-align: center;
-    margin-top: 20px; 
+    margin-top: 20px;
 }
 
+
+#validSection p {
+    text-align: center;
+    margin-top: 20px;
+}
 
 #validSection img {
     max-width: 500px; 
     max-height: 500px; 
     width: auto;
     height: auto;
+}
+
+@media screen and (min-width: 768px) {
+    .form-container {
+        max-width: 600px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .main-container {
+        padding: 40px;
+    }
 }
