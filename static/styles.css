@@ -6,14 +6,21 @@
 }
 
 body {
+    /* background-color: #f0f0f0; */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background-image: url('./mellow-background.png');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
 }
 
+
 .form-container {
+    /* background-color: #f0f0f0; */
+
     width: 300px; 
     margin: 0 auto;
 }
@@ -25,6 +32,8 @@ body {
 }
 
 .content-box {
+    background-color: #f0f0f0;
+
     border: 4px solid #333; 
     padding: 20px;
     width: 80%; 
