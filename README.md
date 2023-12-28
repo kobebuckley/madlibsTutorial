@@ -1,12 +1,7 @@
 # madlibsTutorial
 
-* more ideas * 
 
-- Ensuring that page refresh does not also attempt to 'reroll' for a new story using the same words. Unless the user clicks a button to do so for example
-
-- Adding in the image generation feature, while ensuring there is a limit on it 
-
-
+- ? (maybe) Ensuring that page refresh does not also attempt to 'reroll' for a new story using the same words. Unless the user clicks a button to do so for example
 
 --------------------------
 
@@ -70,3 +65,8 @@ https://github.com/openai/openai-python
 Api Key for Open Ai (Single Project)
 
 https://platform.openai.com/docs/quickstart?context=python
+
+
+Setting Budget (So you dont get charged a ton of money if people spam your app with image generation)
+
+https://platform.openai.com/account/limits
