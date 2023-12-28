@@ -70,7 +70,3 @@ https://github.com/openai/openai-python
 Api Key for Open Ai (Single Project)
 
 https://platform.openai.com/docs/quickstart?context=python
-
-Buy Credits to use the API for Dall-e (currently no need to buy Plus, just need credits)
-
-https://labs.openai.com/
