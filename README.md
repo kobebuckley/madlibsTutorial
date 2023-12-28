@@ -1,14 +1,9 @@
 # madlibsTutorial
 
-* more ideas * 
+
+- ? (maybe) Ensuring that page refresh does not also attempt to 'reroll' for a new story using the same words. Unless the user clicks a button to do so for example
+
 --------------------------
-
-Ensuring that page refresh does not also attempt to 'reroll' for a new story using the same words. Unless the user clicks a button to do so for example
-
-Adding in the image generation feature, while ensuring there is a limit on it 
---------------------------
-
-
 
 The Start of Tutorials based on QDD (https://youtu.be/343EWZS9O88?t=63) that will be shared on CWA
 --------------------------
@@ -43,15 +38,35 @@ Do we need a Front end ( HTML & CSS ) for this or do we keep this at just a term
 *Resources*
 --------------------------
 
-Google, ChatGPT
+Google, ChatGPT, Open Ai: DALL·E
 
 *NLP: Parts of Speech (POS)*
 --------------------------
 
-First we install NLTK
+Installing NLTK
 
 https://realpython.com/nltk-nlp-python/
 
-Then We will focus on Tagging Parts of Speech
+Parts of Speech Integration with Python
 
 https://realpython.com/nltk-nlp-python/#tagging-parts-of-speech
+
+*DALL·E: Image Generation*
+--------------------------
+
+Incorporate DALL·E for image generation based on User Input + Stories 
+
+https://platform.openai.com/docs/guides/images/
+
+Finding instructions to import Open Ai api
+
+https://github.com/openai/openai-python
+
+Api Key for Open Ai (Single Project)
+
+https://platform.openai.com/docs/quickstart?context=python
+
+
+Setting Budget (So you dont get charged a ton of money if people spam your app with image generation)
+
+https://platform.openai.com/account/limits

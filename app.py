@@ -1,6 +1,7 @@
 import random
 from flask import Flask, render_template, request
 from main import validate_sentence
+from openai import OpenAI # pip install openai
 
 app = Flask(__name__)
 
@@ -28,12 +29,13 @@ def validate_words():
     valid_verb = validation_sentence[2]
 
     stories = [
-        f"Jujutsu Kaisen follows {noun} {adjective} students {verb} curses and their powers.",
-        f"Dr. Stone portrays a world where {noun} {verb} to rebuild civilization after a {adjective} event.",
-        f"Jujutsu Kaisen introduces a {adjective} {noun} who {verb} to control cursed energy.",
-        f"{verb} Shippuden delves into the {adjective} {noun} of a young ninja's growth.",
-        f"A {adjective} cat psychic {noun} who {verb} evil spirits in Mob Psycho the anime style.",
-        f"Envision the {adjective} cat-and-mouse game between a detective and a {noun} who {verb} death through Death Note the anime style"]
+        f"Jujutsu Kaisen follows {noun} {adjective} students {verb} curses and their powers in an anime stlye.",
+        f"Dr. Stone portrays a world where {noun} {verb} to rebuild civilization after a {adjective} event in an anime stlye.",
+        f"Jujutsu Kaisen introduces a {adjective} {noun} who {verb} to control cursed energy in an anime stlye.",
+        f"Jujutsu Kaisen introduces a {adjective} {noun} who {verb} to control cursed energy in Attack on Titan the anime stlye.",
+        f"{verb} Shippuden delves into the {adjective} {noun} of a young ninja's growth in an anime stlye.",
+        f"A {adjective} cat psychic {noun} who {verb} evil spirits in the anime style of Mob Psycho.",
+        f"Envision the {adjective} cat-and-mouse game between a detective and a {noun} who {verb} death through Death Note in an anime stlye"]
 
     randomStory = random.choice(stories)
 
@@ -46,10 +48,24 @@ def validate_words():
     if not valid_verb:
         error_messages.append("Not a valid verb. Please try again.")
 
+    client = OpenAI() # needs api key to function, also will need dot env to hide the key 
+
+    response = client.images.generate(
+    model="dall-e-3",
+    prompt=randomStory,
+    size="1024x1024",
+    quality="standard",
+    n=1,
+    )
+
+    image_url = response.data[0].url
+
+
     if error_messages:
         return render_template('index.html', error_messages=error_messages)
     else:
        return render_template('index.html', valid_noun=valid_noun, valid_verb=valid_verb, valid_adjective=valid_adjective,
-                            noun=noun, verb=verb, adjective=adjective, randomStory=randomStory)
+                            noun=noun, verb=verb, adjective=adjective, randomStory=randomStory, image_url=image_url)
+                            
 if __name__ == '__main__':
     app.run(debug=True)     
