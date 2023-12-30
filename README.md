@@ -66,7 +66,20 @@ Api Key for Open Ai (Single Project)
 
 https://platform.openai.com/docs/quickstart?context=python
 
-
 Setting Budget (So you dont get charged a ton of money if people spam your app with image generation)
 
 https://platform.openai.com/account/limits
+
+Changing how the Dalle Images look 
+
+https://cookbook.openai.com/articles/what_is_new_with_dalle_3
+
+
+
+
+*Styling Inpsiration / Goal*
+
+The Style of Madlibs will be based on this site
+
+https://www.thewordfinder.com/wordlibs/
+

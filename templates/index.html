@@ -2,39 +2,51 @@
 <html>
 <head>
     <title>User Input Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h1>Input Form</h1>
+    <div class="content-box">
 
-    <form action="/story-val" method="post">
-        <label for="noun_input">Enter a noun:</label>
-        <input type="text" id="noun_input" name="noun_input" required placeholder="tom, apple...">
+        <h1>Input Form</h1>
+        
+        <form action="/story-val" method="post" class="form-container">
 
-        <label for="adj_input">Enter an adjective:</label>
-        <input type="text" id="adj_input" name="adj_input" placeholder="big, small..." required>
+        <div class="form-group">
+            <label for="noun_input">Enter a noun:</label>
+            <input type="text" id="noun_input" name="noun_input" required placeholder="tom, apple...">
+        </div>
 
-        <label for="verb_input">Enter a verb:</label>
-        <input type="text" id="verb_input" name="verb_input" placeholder="run, running" required>
+        <div class="form-group">
+            <label for="adj_input">Enter an adjective:</label>
+            <input type="text" id="adj_input" name="adj_input" placeholder="big, small..." required>
+        </div>    
 
-        <input type="submit" value="Submit">
-    </form>
-
-    <div id="errorSection">
-        {% if error_messages %}
+        <div class="form-group">
+            <label for="verb_input">Enter a verb:</label>
+            <input type="text" id="verb_input" name="verb_input" placeholder="run, running" required>
+        </div>
+        
+            <input type="submit" value="Submit">
+        </form>
+        
+        <div id="errorSection">
+            {% if error_messages %}
             <ul class="error">
                 {% for error_message in error_messages %}
-                    <li>{{ error_message }}</li>
+                <li>{{ error_message }}</li>
                 {% endfor %}
             </ul>
-        {% endif %}
-    </div>
-    
-    <div id="validSection">
-        {% if valid_noun and valid_adjective and valid_verb %}
+            {% endif %}
+        </div>
+        
+        <div id="validSection">
+            {% if valid_noun and valid_adjective and valid_verb %}
             <p>{{ randomStory }}</p>
-            <img src="{{ image_url }}" alt="image of ai input" size="500x500">
-        {% endif %}
+            <!-- <img src="{{ image_url }}" alt="image of ai input"> -->
+            <img src="{{ image_url }}" alt="PLACEHOLDER">
+            {% endif %}
+        </div>       
     </div>
-    
-
-</html>
+</body>
+        </html>
+        
