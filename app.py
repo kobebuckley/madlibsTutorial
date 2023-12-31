@@ -7,6 +7,8 @@ app = Flask(__name__)
 
 @app.route('/')
 
+# maybe can be put on AWS later
+
 def index():
     return render_template('index.html')
 
